@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- <div class="background">
+    </div> -->
+   <header>
+       <div class="logo">
+           <img src="img,.jpg">
+        </div>
+        
+        <div class="menu">
+            <li> <a href="">GIỚI THIỆU</a></li>
+            <li> <a href="">THỂ LOẠI ẢNH</a>
+                <ul class="sub-menu">
+                    <li><a href="">Nhiếp ảnh chân dung</a></li>
+                    <li><a href="">Nhiếp ảnh phong cảnh</a></li>
+                    <li><a href="">Nhiếp ảnh kiến trúc</a></li>
+                    <li><a href="">Nhiếp ảnh thể thao</a></li>
+                </ul>
+            </li>
+            <li> <a href="category.html">MÁY ẢNH</a>
+                <ul class="sub-menu">
+                    <li><a href="dslr.html">Máy ảnh DSLR</a></li>
+                    <li><a href="mirrorless.html">Máy ảnh Mirrorless</a></li>
+                    <li><a href="">Máy ảnh Bridge</a></li>
+                    <li><a href="">Máy ảnh Compact</a></li>
+                </ul>
+            </li>
+            
+            <li> <a href="">SẢN PHẨM KHÁC</a>
+                <ul class="sub-menu">
+                    <li><a href="">Lens</a></li>
+                    <li><a href="">Các dụng cụ khác</a></li>
+                </ul>
+            </li>
+            <li> <a href="">GIỎ HÀNG</a></li>
+            <li> <a href="">LIÊN HỆ</a></li>
+            <li> <a href="">ĐĂNG NHẬP</a></li>
+
+        </div>
+        <div class="other">
+            <li> <input placeholder="Tìm kiếm" type="text"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>  
+            </li>
+            <li><a href=""><i class="fa-solid fa-user"></i></li></a>
+        </div>
+    </header>
+
+    <section id="slider">
+        <div class="aspect-ratio-169">
+            <img src="canon.png">
+            <div class="text"><a href="">Learn more</a></div>
+            
+            <img src="sony.png">
+            <div class="text"><a href="">Learn more</a></div>
+        </div>
+        <div class="dot-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+
+
+<!---footer-->
+    <section class="app-container">
+            <p>Tải ứng dụng nhiếp ảnh</p>
+            <div class="app-google">
+                <a href="" class="link-ggplay">
+                    <img src="googleplay.png" alt="">
+                </a>
+               <a href="" class="link-appstore">
+                   <img src="appstore.png" alt="">
+               </a>
+            </div>
+    </section>
+<div class="footer-top">
+    <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
+    <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
+</div>
+
+<!--footer-->
+</body>
+<script>
+    
+    const imgPosition = document.querySelectorAll(" .aspect-ratio-169 img")
+    
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNumber = imgPosition.length
+    let index = 0
+    imgPosition.forEach(function(image, index){
+       image.style.left = index*100 + "%"
+       dotItem[index].addEventListener("click",function(){
+        slider(index)
+       })
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if(index>=imgNumber) {index=0}
+        slider (index)
+        
+
+    }
+
+    function slider(index) {
+        
+        imgContainer.style.left = "-" +index*100+ "%"
+        const dotActive = document.querySelector('.active')
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide,5000)
+
+
+</script>
+</html>
+
+<!--
+-->
