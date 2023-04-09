@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,17 @@
     <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <title>{% block title %}Photography{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 <body>
     <!-- <div class="background">
     </div> -->
-   <header>
-       <div class="logo">
-           <img src="img,.jpg">
-        </div>
-        
+   <header>            
+        <a href="/", class="logo">
+                <img src="/media/img,.jpg">
+        </a>
         <div class="menu">
             <li> <a href="">GIỚI THIỆU</a></li>
             <li> <a href="">THỂ LOẠI ẢNH</a>
@@ -27,7 +27,7 @@
                     <li><a href="">Nhiếp ảnh thể thao</a></li>
                 </ul>
             </li>
-            <li> <a href="category.html">MÁY ẢNH</a>
+            <li> <a href="/camera">MÁY ẢNH</a>
                 <ul class="sub-menu">
                     <li><a href="dslr.html">Máy ảnh DSLR</a></li>
                     <li><a href="mirrorless.html">Máy ảnh Mirrorless</a></li>
@@ -54,12 +54,14 @@
         </div>
     </header>
 
+<!---footer-->    
+    {% block content %}
     <section id="slider">
         <div class="aspect-ratio-169">
-            <img src="canon.png">
+            <img src="/media/canon.png">
             <div class="text"><a href="">Learn more</a></div>
             
-            <img src="sony.png">
+            <img src="/media/sony.png">
             <div class="text"><a href="">Learn more</a></div>
         </div>
         <div class="dot-container">
@@ -67,20 +69,19 @@
             <div class="dot"></div>
         </div>
     </section>
-
-
-<!---footer-->
+    {% endblock %}
     <section class="app-container">
             <p>Tải ứng dụng nhiếp ảnh</p>
             <div class="app-google">
                 <a href="" class="link-ggplay">
-                    <img src="googleplay.png" alt="">
+                    <img src="/media/googleplay.png" alt="">
                 </a>
                <a href="" class="link-appstore">
-                   <img src="appstore.png" alt="">
+                   <img src="/media/appstore.png" alt="">
                </a>
             </div>
     </section>
+
 <div class="footer-top">
     <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
     <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>

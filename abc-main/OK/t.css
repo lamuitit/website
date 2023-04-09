@@ -1,0 +1,132 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 150vh;
+}
+
+nav {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: ease-in-out 0.5s;
+}
+
+nav.hide {
+    width: 0;
+}
+
+
+nav ul {
+    width: 100%;
+   margin: 18rem 0rem;
+    list-style: none;
+    overflow: hidden;
+
+}
+
+
+nav ul li a {
+    width: 100%;
+    color:cornflowerblue;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px;
+    transition: linear 0.5s;
+}
+
+nav ul li a ion-icon {
+    margin: 0 20px;
+    color: cornflowerblue;
+    font-size: 1.2em;
+    transition: linear 0.2s;
+}
+
+
+nav ul li a:hover {
+    background: cornflowerblue;
+    color: white;
+}
+
+nav ul li a:hover ion-icon {
+    color: white;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+}
+.content2{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: ease-in-out 0.5s;
+}
+.content.expand {
+   width: 100%;
+   left: 0;
+}
+
+.content h2 {
+    font-size: 4.5em;
+    color: cornflowerblue;
+    text-transform: uppercase;
+    
+
+}
+
+nav .toggle_menu {
+    position: absolute;
+    top: 20px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+nav .toggle_menu ion-icon {
+    color: cornflowerblue;
+    font-size: 1.5em;
+    transition: linear 0.2s;
+}
+nav.toggle_menu:hover {
+    background: cornflowerblue;
+}
+nav.toggle_menu:hover ion-icon {
+    color: white;
+}

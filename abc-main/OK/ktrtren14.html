@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="t.css">
+    <title>Web hỗ trợ cấp lại hô chiếu cho người Việt Nam</title>
+</head>
+
+<body>
+    <nav>
+        <div class="toggle_menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <ul>
+            <li><a href="ktrtren14.html">
+                    <ion-icon name="help-circle-outline"></ion-icon>
+                    Hồ sơ người trên 14 tuổi
+                </a></li>
+            <li><a href="ktrduoi14.html">
+                    <ion-icon name="search-circle-outline"></ion-icon>
+                    Hồ sơ người dưới 14 tuổi
+                </a></li>
+
+        </ul>
+    </nav>
+    <section class="content2">
+
+
+        <body>
+        </body>
+        <br>
+        <br>
+        <br>
+        <b> Hồ sơ thông tin đã nhập </h2>
+            </br><br>
+            <form>
+                <label for="name">Họ và tên: </label>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="birthday">Ngày tháng năm sinh: </label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+
+                <label for="gender"> Giới tính: </label>
+                <input type="radio" id="gioitinh" name="gender">Nam
+                <input type="radio" name="gender">Nữ <br><br>
+
+
+                <label for="sdt">SĐT: </label>
+                <input type="number" id="sdt" name="sdt"><br><br>
+
+                <label for="location">Địa chỉ liên lạc: </label>
+                <input type="text" id="location" name="location"><br><br>
+
+
+                <p> Ảnh tờ khai 4*6: <input type="file" accept="image/png, image/jpg, image/jpeg" id="photo4.6" />
+                </p>
+                <br />
+
+
+                <p> Ảnh hộ chiếu cũ (Trường hợp: Ảnh hộ chiếu được cấp lần gần nhất đối với người đã có hộ chiếu): <input
+                        type="file" accept="image/png, image/jpg, image/jpeg" id="photoHCC" /> </p><br /><br />
+
+
+                <p> Ảnh hộ chiếu cũ (Trường hợp: Ảnh đơn báo mất hoặc thông báo về việc đã tiếp nhận đơn có thậm quyền): <input
+                        type="file" accept="image/png, image/jpg, image/jpeg" id="photoHCC" /> </p><br /><br />
+                <p> Ảnh giấy CMND hoặc CCCD: <input type="file" accept="image/png, image/jpg, image/jpeg"
+                        id="photoCCCD" /> </p><br /> <br />
+                <input style="font-size:large" type="submit" value="SUPMIT">
+
+
+            </form>Í
+
+
+</body>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    const nav = document.querySelector('nav');
+    const toggle_menu = document.querySelector('.toggle_menu');
+    const content = document.querySelector('content');
+
+    toggle_menu.onclick = function () {
+        nav.classList.toggle('hide');
+        content.classList.toggle('expand');
+    }
+
+</script>
+
+</html>
