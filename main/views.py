@@ -21,6 +21,21 @@ def index(response):
 def camera(response):
     return render(response, 'temps/category.html', {})
 
+def dslr(response):
+    return render(response, 'temps/dslr.html', {})
+
+def mirrorless(response):
+    return render(response, 'temps/mirrorless.html', {})
+
+def login(response):
+    return render(response, 'temps/login.html', {})
+
+def canon750D(response):
+    return render(response, 'temps/canon750D.html', {})
+
+def introduction(response):
+    return render(response, 'temps/introduction.html', {})
+
 
 
 def tokhaithongtin(response):

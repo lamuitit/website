@@ -10,7 +10,8 @@ header {
     left:0;
     z-index: 1;
     width: 100%;
-    background: white;
+    background: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -31,6 +32,7 @@ a {
 }
 
 .menu {
+  font-family: "Open Sans", sans-serif;
     flex:3;
     display: flex;
     
@@ -57,7 +59,7 @@ a {
     z-index: 1;
 }
 .sub-menu >li>a {
-    width: 150px;
+    width: 200px;
     border: none solid rgb(158, 146, 146);
     background-color: rgb(235, 237, 239);
 }
@@ -175,16 +177,18 @@ a {
 
   .footer-top {
     text-align: center;
-    
+    font-family: "Open Sans", sans-serif;
     padding-bottom: 20px;
   }
 
   .footer-top p {
+    font-family: "Open Sans", sans-serif;
     margin-top: 12px;
     font-weight: bold;
   }
 
   .row {
+    font-family: "Open Sans", sans-serif;
     padding-top: 0px;
     position: absolute;
     display: flex;
@@ -198,6 +202,7 @@ a {
   
   /* header */
   nav {
+    font-family: "Open Sans", sans-serif;
     padding: 15px;
     width: 100%;
     display: flex;
@@ -229,6 +234,7 @@ a {
   }
   
   .content-nav form {
+    font-family: "Open Sans", sans-serif;
     position: relative;
   }
   
@@ -242,6 +248,7 @@ a {
   
   .content-nav form button {
     padding: 5px;
+    font-family: "Open Sans", sans-serif;
     border-radius: 12px;
     position: absolute;
     right: 0;
@@ -253,6 +260,7 @@ a {
   
   /* modal */
   .modal {
+    font-family: "Open Sans", sans-serif;
     display: none;
     position: fixed;
     z-index: 1;
@@ -299,6 +307,7 @@ a {
   }
   
   .btn {
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
     outline: none;
     font-weight: 400;
@@ -371,11 +380,13 @@ a {
 
   /* wrapper */
 .wrapper {
+  font-family: "Open Sans", sans-serif;
   padding: 2rem;
   padding-top:75px;
 }
 
 .products ul {
+  font-family: "Open Sans", sans-serif;
   display: inline-block;
 }
 
@@ -472,6 +483,7 @@ a {
 
 
 .header {
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 20px;
   padding-top:50px;
@@ -494,6 +506,7 @@ a {
 }
 
 .foot {
+  font-family: "Open Sans", sans-serif;
   padding-top:12px;
   text-align :center;
 }
@@ -504,4 +517,46 @@ a {
 }
 .boby > p {
     margin-right: 10px;
+}
+
+
+/* -----------------------------chi tiết sản phẩm----------------------*/
+.containers {
+  text-align: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.images {
+  align-items: center;
+  text-align: center;
+  flex:1;
+  padding-top:75px;
+  flex :1;
+}
+
+.product {
+  font-size:20px;
+  font-weight: bold;
+  padding-top:50px;
+}
+h2 {
+  margin-top:20px;
+  border: #000;
+  font-weight:bold;
+}
+.add {
+  margin-top:10px;
+  width: 200px;
+  padding-left:auto;
+  padding-right: auto;
+  height: 50px;
+  text-align: center;
+  border: 1px solid black;
+  background-color:#0ee1de;
+  font-size:20px;
+  border-radius:10px;
+  
+}
+.adds {
+  color:white;
 }

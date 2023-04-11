@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% block title %}introduction{% endblock %}
+{% block content %} 
+
+<style>
+    * {
+			margin: 0;
+			padding: 0;
+			 box-sizing: border-box;
+		}
+
+		html,
+		body {
+			height: 100vh;
+			font-family: "Open Sans", sans-serif;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #cecece;
+			background-image: url(/media/background-intro.jpg);
+		}
+
+		.card {
+			position: absolute;
+			height: 350px;
+			width: 100%;
+			max-width: 950px;
+			margin: auto;
+			background: #ffffff;
+			border-radius: 25px;
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+		}
+
+		.card .inner_part {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 0 0 30px;
+			height: 350px;
+			position: absolute;
+		}
+
+		#slideImg:checked ~ .inner_part {
+			padding: 0;
+			transition: 0.1s ease-in;
+		}
+
+		.inner_part .img {
+			height: 260px;
+			width: 260px;
+			overflow: hidden;
+			flex-shrink: 0;
+			border-radius: 20px;
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+		}
+
+		#slideImg:checked ~ .inner_part .img {
+			height: 350px;
+			width: 850px;
+			z-index: 99;
+			transition: 0.3s 0.2s ease-in;
+		}
+
+		.img img {
+			height: 100%;
+			width: 100%;
+			cursor: pointer;
+			opacity: 0;
+			transition: 0.6s;
+		}
+
+		#slide_1:checked ~ .inner_part .img_1,
+		#slide_2:checked ~ .inner_part .img_2,
+        #slide_3:checked ~ .inner_part .img_3,
+        #slide_4:checked ~ .inner_part .img_4,
+		#slide_5:checked ~ .inner_part .img_5 {
+			opacity: 1;
+			transition-delay: 0.2s;
+		}
+
+		.content {
+			padding: 0 20px 0 35px;
+			width: 530px;
+			margin-left: 50px;
+			opacity: 0;
+			transition: 0.6s;
+		}
+
+		#slideImg:checked ~ .inner_part .content {
+			display: none;
+		}
+
+		#slide_1:checked ~ .inner_part .content_1,
+        #slide_2:checked ~ .inner_part .content_2,
+        #slide_3:checked ~ .inner_part .content_3,
+		#slide_4:checked ~ .inner_part .content_4,
+		#slide_5:checked ~ .inner_part .content_5 {
+			opacity: 1;
+			margin-left: 0;
+			z-index: 100;
+			transition-delay: 0.3s;
+		}
+
+		.content .title {
+			font-size: 30px;
+			font-weight: 700;
+			color: #0d0925;
+			margin: 0 0 20px 0;
+		}
+
+		.content .text {
+			font-size: 19px;
+			color: #4e4a67;
+			margin: 0 auto 30px auto;
+			line-height: 1.5em;
+			text-align: justify;
+		}
+
+		.content button {
+			padding: 15px 20px;
+			border: none;
+			font-size: 16px;
+			color: #fff0e6;
+			font-weight: 600;
+			letter-spacing: 1px;
+			border-radius: 50px;
+			cursor: pointer;
+			outline: none;
+			background: #000000;
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+			float: right;
+		}
+
+		.content button:hover {
+			background: #cecece;
+			color: #000000;
+		}
+
+		.slider {
+			position: absolute;
+			bottom: 25px;
+			left: 55%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+		#slideImg:checked ~ .slider {
+			display: none;
+		}
+
+		.slider .slide {
+			position: relative;
+			height: 10px;
+			width: 50px;
+			background: #d9d9d9;
+			border-radius: 5px;
+			display: inline-flex;
+			margin: 0 3px;
+			cursor: pointer;
+		}
+
+		.slider .slide:before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: -100%;
+			background: #000000;
+			border-radius: 10px;
+			transform: scaleX(0);
+			transition: transform 0.6s;
+			transform-origin: left;
+		}
+
+		#slide_1:checked ~ .slider .slide_1:before,
+		#slide_2:checked ~ .slider .slide_2:before,
+		#slide_3:checked ~ .slider .slide_3:before,
+		#slide_4:checked ~ .slider .slide_4:before,
+		#slide_5:checked ~ .slider .slide_5:before {
+			transform: scaleX(1);
+			width: 100%;
+		}
+
+		input {
+			display: none;
+		}
+</style>
+
+<!-- <section class="body"> -->
+    
+    <div class="card">
+        <input type="radio" name="select" id="slide_1" checked>
+		<input type="radio" name="select" id="slide_2">
+		<input type="radio" name="select" id="slide_3">
+        <input type="radio" name="select" id="slide_4">
+        <input type="radio" name="select" id="slide_5">
+		<input type="checkbox" id="slideImg">
+        
+		<div class="slider">
+            <label for="slide_1" class="slide slide_1"></label>
+			<label for="slide_2" class="slide slide_2"></label>
+			<label for="slide_3" class="slide slide_3"></label>
+			<label for="slide_4" class="slide slide_4"></label>
+			<label for="slide_5" class="slide slide_5"></label>
+		</div>
+        
+		<div class="inner_part">
+            <label for="slideImg" class="img">
+                <img class="img_1" src="/media/img5.jpg">
+			</label>
+			<div class="content content_1">
+				<div class="title">INTRODUCTION</div>
+				<div class="text">
+                    Chào mừng bạn đến với trang web bán máy ảnh và các dụng cụ của máy ảnh! Chúng tôi cung cấp một loạt các sản phẩm máy ảnh và các phụ kiện, giúp cho việc chụp ảnh của bạn trở nên dễ dàng và tốt hơn.
+				</div>
+				<!-- <button>Read More</button> -->
+			</div>
+		</div>
+        
+		<div class="inner_part">
+            <label for="slideImg" class="img">
+                <img class="img_2" src="/media/img1.jpg">
+			</label>
+			<div class="content content_2">
+				<!-- <div class="title">INTRODUCTION</div> -->
+				<div class="text">
+                    Với sự đa dạng của các sản phẩm, bạn có thể dễ dàng tìm thấy máy ảnh hoặc phụ kiện mà phù hợp với nhu cầu và ngân sách của bạn. Bất kể bạn là một nhiếp ảnh gia chuyên nghiệp hay mới bắt đầu với máy ảnh, chúng tôi sẽ cung cấp cho bạn một trải nghiệm mua sắm tuyệt vời và giúp bạn chọn được sản phẩm tốt nhất.
+				</div>
+				<!-- <button>Read More</button> -->
+			</div>
+		</div>
+        
+		<div class="inner_part">
+            <label for="slideImg" class="img">
+                <img class="img_3" src="/media/img2.jpg">
+			</label>
+			<div class="content content_3">
+                <!-- <div class="title">INTRODUCTION</div> -->
+				<div class="text">Nếu bạn đang tìm kiếm một máy ảnh mới, chúng tôi có rất nhiều lựa chọn từ các thương hiệu nổi tiếng như Canon, Nikon, Sony và Fujifilm. Nếu bạn đang tìm kiếm các phụ kiện cho máy ảnh của mình, chúng tôi cung cấp các sản phẩm như ống kính, bộ điều khiển từ xa, thẻ nhớ và pin dự phòng.
+                </div>
+				<!-- <button>Read More</button> -->
+			</div>
+		</div>
+
+        <div class="inner_part">
+            <label for="slideImg" class="img">
+                <img class="img_4" src="/media/img3.jpg">
+			</label>
+			<div class="content content_4">
+                <!-- <div class="title">INTRODUCTION</div> -->
+				<div class="text">Ngoài ra, chúng tôi cũng cung cấp các dịch vụ bảo trì và sửa chữa máy ảnh, để giúp bạn duy trì máy ảnh của mình luôn hoạt động tốt nhất. Chúng tôi cam kết cung cấp cho bạn một dịch vụ chuyên nghiệp và nhanh chóng, để giữ cho máy ảnh của bạn luôn trong tình trạng hoạt động tốt nhất.
+                </div>
+				<!-- <button>Read More</button> -->
+			</div>
+		</div>
+
+        <div class="inner_part">
+            <label for="slideImg" class="img">
+                <img class="img_5" src="/media/img4.jpg">
+			</label>
+			<div class="content content_5">
+                <div class="title">CONCLUSION</div>
+				<div class="text">Cảm ơn bạn đã ghé thăm trang web của chúng tôi. Hãy khám phá các sản phẩm và dịch vụ của chúng tôi, và liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào.
+                </div>
+				<!-- <button>Read More</button> -->
+			</div>
+		</div>
+
+
+	</div>
+</section>
+
+
+{% endblock %}

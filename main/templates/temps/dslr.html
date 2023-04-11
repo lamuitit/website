@@ -1,61 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>photography</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-   <header>
-       <div class="logo">
-           <img src="img,.jpg">
-           </div>
-        </div>
-        
-        <div class="menu">
-            <li> <a href="">GIỚI THIỆU</a></li>
-            <li> <a href="">THỂ LOẠI ẢNH</a>
-                <ul class="sub-menu">
-                    <li><a href="">Nhiếp ảnh chân dung</a></li>
-                    <li><a href="">Nhiếp ảnh phong cảnh</a></li>
-                    <li><a href="">Nhiếp ảnh kiến trúc</a></li>
-                    <li><a href="">Nhiếp ảnh thể thao</a></li>
-                </ul>
-            </li>
-            <li> <a href="">MÁY ẢNH</a>
-                <ul class="sub-menu">
-                    <li><a href="">Máy ảnh DSLR</a></li>
-                    <li><a href="">Máy ảnh Mirrorless</a></li>
-                    <li><a href="">Máy ảnh Bridge</a></li>
-                    <li><a href="">Máy ảnh Compact</a></li>
-                </ul>
-            </li>
-            
-            <li> <a href="">SẢN PHẨM KHÁC</a>
-                <ul class="sub-menu">
-                    <li><a href="">Lens</a></li>
-                    <li><a href="">Các dụng cụ khác</a></li>
-                </ul>
-            </li>
-            <li> <a href="">GIỎ HÀNG</a></li>
-            <li> <a href="">LIÊN HỆ</a></li>
-            <li> <a href="">ĐĂNG NHẬP</a></li>
-
-        </div>
-        <div class="other">
-            <li> <input placeholder="Tìm kiếm" type="text"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>  
-            </li>
-            <li><a href=""><i class="fa-solid fa-user"></i></li></a>
-        </div>
-    </header>
-
-
-
-
+{% extends "base.html" %}
+{% block title %}dslr{% endblock %}
+{% block content %} 
 <!------------------cartegory--------------->
 
 
@@ -66,161 +11,133 @@
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/canon4000D copy.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3"><a href="">Canon EOS 4000D</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">100000000đ</span>
+                            <span class="money">12.000.000 vnd</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/DSLR_Canon750D copy.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3" > <a href="/canon750D">Canon 750D</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">12990000đ</span>
+                            <span class="money">10.000.000 vnd</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="/canon750D">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/DSLR_NikonD3500 copy.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3"><a href="">Nikon D3500</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">159900000đ</span>
+                            <span class="money">15.990.000 vnd</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product no-margin">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/DSLR_Canon750D copy.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3"><a href="">Canon 750D</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">89000000đ</span>
+                            <span class="money">15.000.000 vnd</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/sony-alpha-a77-ii-body-chinh-hang.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon
+                    <h3 class="content-product-h3"><a href="">Sony Alpha A77</a>
                     </h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">219900000đ</span>
+                            <span class="money">21.990.000đ</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/sony-alpha-dslr-a450.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Canon</h3>
+                    <h3 class="content-product-h3"><a href="">Sony Alpla A450</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">11500000đ</span>
+                            <span class="money">11.500.000đ</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/sonyA6000.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3"><a href="">Sony A6000</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">1295000đ</span>
+                            <span class="money">12.950.000đ</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
             <li class="main-product no-margin">
                 <div class="img-product">
                     <img class="img-prd"
-                        src="DSLR_NikonD3500.jpg"
+                        src="/media/Sony-A6300.png"
                         alt="">
                 </div>
                 <div class="content-product">
-                    <h3 class="content-product-h3">Nikon</h3>
+                    <h3 class="content-product-h3"><a href="">Sony A6300</a></h3>
                     <div class="content-product-deltals">
                         <div class="price">
-                            <span class="money">85000đ</span>
+                            <span class="money">22.000.000đ</span>
                         </div>
-                        <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+                        <button type="button" class="btn btn-cart"> <a href="">Chi tiết sản phẩm</a> </button>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
 </section>
-
-
-
-
-
-
-
-<!------------footer-------------------->
-
-
-<section class="app-container">
-    <p>Tải ứng dụng nhiếp ảnh</p>
-    <div class="app-google">
-        <a href="" class="link-ggplay">
-            <img src="googleplay.png" alt="">
-        </a>
-       <a href="" class="link-appstore">
-           <img src="appstore.png" alt="">
-       </a>
-    </div>
-</section>
-<div class="footer-top">
-<p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
-<p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
-</div>
-
-</body>
-
- </html>
+{% endblock %}
