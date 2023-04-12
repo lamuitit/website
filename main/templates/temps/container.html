@@ -1,0 +1,187 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>container</title>
+</head>
+    <body>
+        <style>
+            body {
+         font-family:"Open Sans", sans-serif; ;
+         margin: 0;
+         padding: 0;
+     }
+     
+     header {
+        text-align: center;
+        align-items: center;
+         background-color: #56baed;
+         color: #fff;
+         padding: 20px;
+     }
+     
+     h1 {
+         margin: 0;
+     }
+     
+     table {
+         border-collapse: collapse;
+         width: 100%;
+     }
+     
+     thead {
+         background-color: #f2f2f2;
+     }
+     
+     th {
+         padding: 10px;
+         text-align: left;
+     }
+     
+     td {
+         padding: 10px;
+         border-bottom: 1px solid #ddd;
+     }
+     
+     tfoot td {
+         font-weight: bold;
+     }
+     
+     .buttons {
+        
+         margin-top: 20px;
+         display: flex;
+         justify-content: space-between;
+         margin-left:100px;
+         margin-right:100px;
+         color:#d30e0e;
+     }
+     
+     button {
+         background-color: #56baed;
+         color: #fff;
+         padding: 10px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: background-color 0.3s ease;
+     }
+     
+     button:hover {
+         background-color: #56baed;
+     }
+     
+         </style>
+	<header>
+		<h1>Giỏ hàng của bạn</h1>
+	</header>
+	
+	<main>
+		<table>
+			<thead>
+				<tr>
+					<th>Sản phẩm</th>
+					<th>Giá</th>
+					<th>Số lượng</th>
+					<th>Tổng cộng</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Canon EOS 750D</td>
+					<td>10.000.000 vnd</td>
+					<td>
+						<input type="number" value="1" min="1">
+					</td>
+					<td>10.000.000 vnd</td>
+					<td>
+						<button>Xóa</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Lens STM 50mm</td>
+					<td>2.000.000 vnd</td>
+					<td>
+						<input type="number" value="1" min="1">
+					</td>
+					<td>2.000.000 vnd</td>
+					<td>
+						<button>Xóa</button>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Tổng cộng: 12.000.000</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+		
+		<div class="buttons">
+			<button> <a href="/">Quay lại cửa hàng</a> </button>
+			<button>Thanh toán</button>
+		</div>
+	</main>
+</body>
+<script>
+
+const deleteButtons = document.querySelectorAll('tbody button');
+const quantityInputs = document.querySelectorAll('tbody input[type="number"]');
+const totalCells = document.querySelectorAll('tbody td:last-child');
+const subtotalCell = document.querySelector('tfoot td:last-child');
+const backButton = document.querySelector('.buttons button:first-child');
+const checkoutButton = document.querySelector('.buttons button:last-child');
+
+let subtotal = 0;
+
+deleteButtons.forEach
+
+deleteButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const row = button.parentElement.parentElement;
+        row.remove();
+        updateSubtotal();
+    });
+});
+
+quantityInputs.forEach((input, index) => {
+    input.addEventListener('change', () => {
+        const priceCell = input.parentElement.previousElementSibling;
+        const totalCell = input.parentElement.nextElementSibling;
+        const price = parseFloat(priceCell.textContent.replace(/[^0-9.-]+/g,""));
+        const quantity = input.value;
+        const total = price * quantity;
+        totalCell.textContent = total.toLocaleString() + ' đ';
+        updateSubtotal();
+    });
+});
+
+function updateSubtotal() {
+    subtotal = 0;
+    totalCells.forEach((cell, index) => {
+        if (index % 2 === 1) {
+            const price = parseFloat(cell.textContent.replace(/[^0-9.-]+/g,""));
+            subtotal += price;
+        }
+    });
+    subtotalCell.textContent = subtotal.toLocaleString() + ' đ';
+}
+
+backButton.addEventListener('click', () => {
+    window.location.href = 'shop.html';
+});
+
+checkoutButton.addEventListener('click', () => {
+    alert('Chức năng thanh toán chưa được triển khai!');
+});
+
+</script>
+
+</html>

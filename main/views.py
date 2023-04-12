@@ -36,6 +36,11 @@ def canon750D(response):
 def introduction(response):
     return render(response, 'temps/introduction.html', {})
 
+def contact(response):
+    return render(response, 'temps/contact.html', {})
+def container(response):
+    return render(response, 'temps/container.html', {})
+
 
 
 def tokhaithongtin(response):
