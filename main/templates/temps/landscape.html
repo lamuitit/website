@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block title %}landscape{% endblock %}
+{% block content %} 
+<style>
+
+h2 {
+	/* margin-top:50px; */
+	font-family: "Open Sans", sans-serif;
+	margin-bottom:50px;
+	font-size:30px;
+	align-items: center;
+	text-align: center;
+	padding-top: 50px;;
+}
+.landscape {
+	align-items: center;
+	text-align: center;
+	padding-top:50px;
+	margin-top:30px;
+}
+
+.landscape img {
+	width: 300px;
+	height: 200px;
+}
+p {
+	font-family: "Open Sans", sans-serif;
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size:20px;
+	
+}
+h3 {
+	font-weight: bold;
+	font-family: "Open Sans", sans-serif;
+	margin-bottom:10px;
+	font-size:20px;
+	
+
+}
+
+
+	article {
+		font-family: "Open Sans", sans-serif;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+article:last-child {
+	border-bottom: none;
+}
+	
+.add-inf {
+	text-align: center;
+	align-items: center;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	/* display: inline-block; */
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	/* max-width: 800px; */
+	font-family: "Open Sans", sans-serif;
+	margin: 0 auto;
+	padding: 20px;
+	
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section {
+	flex-basis: 50%;
+}
+
+article {
+	margin-left:400px;
+	margin-right:400px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+article:last-child {
+	border-bottom: none;
+}
+
+h2 {
+	margin-top: 10px;
+}
+</style>
+	
+
+	<main>
+		<section class="landscape">
+			<h2>Những bức ảnh về phong cảnh</h2>
+			<ul id="gallery">
+				<a href="/media/landscape1.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape1.jpg" alt="Phong cảnh 1">
+                  </a>
+                  <a href="/media/landscape4.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape4.jpg" alt="Phong cảnh 2">
+                  </a>
+                  <a href="/media/landscape3.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape3.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape5.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape5.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape6.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape6.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape7.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape7.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape8.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape8.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape9.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape9.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape10.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape10.jpg" alt="Phong cảnh 3">
+                  </a>
+				  <a href="/media/landscape11.jpg" data-fancybox="gallery">
+                    <img src="/media/landscape11.jpg" alt="Phong cảnh 3">
+                  </a>
+				
+			</ul>
+		</section>
+
+		<section>
+			<h2>Giới thiệu về nhiếp ảnh phong cảnh</h2>
+			<p>Nhiếp ảnh phong cảnh là một loại nhiếp ảnh được chụp để thể hiện cảnh vật, địa hình và môi trường tự nhiên. Nó là một hình thức nghệ thuật đẹp mắt và được ưa chuộng trong giới nhiếp ảnh. Các bức ảnh phong cảnh thường được sử dụng để trang trí, quảng cáo, và cảm nhận vẻ đẹp của thiên nhiên.
+				<br><br>Nhiếp ảnh phong cảnh là một trong những thể loại nhiếp ảnh phổ biến nhất, thường được sử dụng để thể hiện vẻ đẹp của thiên nhiên và các khung cảnh tự nhiên. Thể loại này yêu cầu nhiếp ảnh gia phải có khả năng chọn góc chụp, phối hợp ánh sáng và cân bằng màu sắc để tạo ra những bức ảnh đẹp và ấn tượng.
+				<br><br>Để chụp ảnh phong cảnh đẹp, bạn cần lựa chọn thiết bị phù hợp, bao gồm máy ảnh và các ống kính có thể chụp được các cảnh quan rộng. Bạn cũng nên chọn thời điểm và điều kiện thời tiết phù hợp để tạo ra những bức ảnh ấn tượng.
+				<br><br>Khi chụp ảnh phong cảnh, bạn nên lưu ý đến việc sắp xếp các yếu tố trong khung hình để tạo ra một bức ảnh cân đối và hài hòa. Bạn cũng nên chú ý đến việc sử dụng các nguyên tắc cơ bản của nhiếp ảnh, bao gồm độ sâu trường, tốc độ màn trập và độ nhạy ISO, để tạo ra một bức ảnh chất lượng.
+				<br><br>Ngoài ra, bạn có thể sử dụng các phần mềm chỉnh sửa ảnh để cải thiện chất lượng của bức ảnh phong cảnh của mình. Tuy nhiên, cần lưu ý rằng chỉnh sửa quá nhiều có thể làm mất đi tính tự nhiên của cảnh quan.
+			 </p>
+		</section>
+		<section>
+			<h2>Bài viết liên quan</h2>
+			<article>
+				<h3>Các kĩ thuật cơ bản của nhiếp ảnh phong cảnh.</h3>
+				<p class="selection">1. Sử dụng độ sâu trường ảnh (depth of field)<br>
+					2. Sử dụng chế độ tắt đèn (shutter priority mode) <br>
+					3. Sử dụng cân bằng trắng (white balance) <br>
+					4. Cách tìm góc chụp. <br>
+				</p>
+				<a class="add-inf" href="#">Read More</a>
+			</article>
+			<article>
+				<h3>Các thiết bị cần có.</h3>
+				<p class="selection">1. Một chiếc máy ảnh
+					<br>2. Một ống kính góc rộng.
+					<br>3. Một tripod.
+					<br>4. Một túi đựng máy ảnh.
+				</p>
+				<a class="add-inf" href="#">Read More</a>
+			</article>
+			<article>
+				<h3>Một số loại ảnh phong cảnh.</h3>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet sapien quis ex bibendum, non dictum velit eleifend.</p> -->
+				<a class="add-inf" href="#">Read More</a>
+			</article>
+		</section>
+	</main>
+{% endblock %}

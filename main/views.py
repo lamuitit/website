@@ -38,10 +38,12 @@ def introduction(response):
 
 def contact(response):
     return render(response, 'temps/contact.html', {})
+
 def container(response):
     return render(response, 'temps/container.html', {})
 
-
+def landscape(response):
+    return render(response, 'temps/landscape.html', {})
 
 def tokhaithongtin(response):
     return render(response, 'temps/tokhaithongtin.html', {})
