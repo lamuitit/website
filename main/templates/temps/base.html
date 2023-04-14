@@ -10,8 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Photography{% endblock %}</title>
+    {% block style %}
     <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/contact.css' %}">
+    {% endblock %}
 </head>
 <body>
     <!-- <div class="background">
@@ -80,7 +83,9 @@
         </div>
     </section>
     {% endblock %}
-
+    
+<!-- khoi footer -->
+{% block footer %}
     <section class="app-container">
             <p>Tải ứng dụng nhiếp ảnh</p>
             <div class="app-google">
@@ -97,9 +102,10 @@
     <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
     <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
 </div>
+{% endblock %}
 
-<!--footer-->
 </body>
+{% block base_script %}
 <script>
     
     const imgPosition = document.querySelectorAll(" .aspect-ratio-169 img")
@@ -134,6 +140,7 @@
 
 
 </script>
+{% endblock %}
 </html>
 
 <!--
