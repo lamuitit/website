@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
+<<<<<<< Updated upstream
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Photography{% endblock %}</title>
@@ -45,16 +46,100 @@
             <li> <a href="">GIỎ HÀNG</a></li>
             <li> <a href="">LIÊN HỆ</a></li>
             <li> <a href="">ĐĂNG NHẬP</a></li>
+=======
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Photography{% endblock %}</title>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- left content -->
+            <div class="left-content">
+                <div class="brand-switchers">
+                    <a href="/" class="logo">
+                        <img src="/media/W-CONE land 2.png" style="width:110px;height:30px;">
+                        <svg class="drop-down-button" style="height: 15px;width: 15px;">
+                            <path style="align-items: center;" d="M.707 1.707l2.586 2.586a1 1 0 
+                            001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- mid content -->
+            <div class="mid-content">
+                <div class="logo-outer">
+                    <a href="/" class="logo" >
+                        <img src="/media/power-button.png" style="height: 30px;width: 30px;position: relative;">
+                    </a>
+                </div>
+                <div class="contenter">
+                    <a href="/introduction" class="text">GIỚI THIỆU
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Nhiếp ảnh chân dung</a></li>
+                            <li><a href="/landscape">Nhiếp ảnh phong cảnh</a></li>
+                            <li><a href="">Nhiếp ảnh kiến trúc</a></li>
+                            <li><a href="">Nhiếp ảnh thể thao</a></li>
+                        </ul> -->
+                    </a>
+                    <a href="/camera" class="text">MÁY ẢNH
+                        <!-- <ul class="sub-menu">
+                            <li><a href="/dslr">Máy ảnh DSLR</a></li>
+                            <li><a href="/mirrorless">Máy ảnh Mirrorless</a></li>
+                            <li><a href="">Máy ảnh Bridge</a></li>
+                            <li><a href="">Máy ảnh Compact</a></li>
+                        </ul> -->
+                    </a>
+                    <a href="">THỂ LOẠI ẢNH
+                        <ul class="sub-menu">
+                            <li><a href="">Nhiếp ảnh chân dung</a></li>
+                            <li><a href="/landscape">Nhiếp ảnh phong cảnh</a></li>
+                            <li><a href="">Nhiếp ảnh kiến trúc</a></li>
+                            <li><a href="">Nhiếp ảnh thể thao</a></li>
+                        </ul>
+                    </a>
+                    <a href="/camera">MÁY ẢNH</a>
+                        <ul class="sub-menu">
+                            <li><a href="/dslr">Máy ảnh DSLR</a></li>
+                            <li><a href="/mirrorless">Máy ảnh Mirrorless</a></li>
+                            <li><a href="">Máy ảnh Bridge</a></li>
+                            <li><a href="">Máy ảnh Compact</a></li>
+                        </ul>
+                    
+                    <a href="">SẢN PHẨM KHÁC
+                        <ul class="sub-menu">
+                            <li><a href="">Lens</a></li>
+                            <li><a href="">Tripod</a></li>
+                            <li><a href="">Sạc dự phòng</a></li>
+                            <li><a href="">Cáp sạc, Pin</a></li>
+                            <li><a href="">Dụng cụ vệ sinh</a></li>
+                            <li><a href="">Hộp hút ẩm</a></li>
+                            <li><a href="">Tủ hút ẩm</a></li>
+                            <li><a href="">Các dụng cụ khác</a></li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
 
-        </div>
-        <div class="other">
-            <li> <input placeholder="Tìm kiếm" type="text"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>  
-            </li>
-            <li><a href=""><i class="fa-solid fa-user"></i></li></a>
-        </div>
+            <!-- right content -->
+            <div class="right-content">
+                <div class="contenter">
+>>>>>>> Stashed changes
+
+                </div>
+            </div>
+
+        </nav>
     </header>
 
-<!---footer-->    
+    <!---khoi content-->
     {% block content %}
     <section id="slider">
         <div class="aspect-ratio-169">
@@ -70,18 +155,25 @@
         </div>
     </section>
     {% endblock %}
+<<<<<<< Updated upstream
+=======
+    
+    <!-- khoi footer -->
+    {% block footer %}
+>>>>>>> Stashed changes
     <section class="app-container">
             <p>Tải ứng dụng nhiếp ảnh</p>
             <div class="app-google">
                 <a href="" class="link-ggplay">
                     <img src="/media/googleplay.png" alt="">
                 </a>
-               <a href="" class="link-appstore">
-                   <img src="/media/appstore.png" alt="">
-               </a>
+                <a href="" class="link-appstore">
+                    <img src="/media/appstore.png" alt="">
+                </a>
             </div>
     </section>
 
+<<<<<<< Updated upstream
 <div class="footer-top">
     <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
     <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
@@ -89,6 +181,16 @@
 
 <!--footer-->
 </body>
+=======
+    <div class="footer-top">
+        <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
+        <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
+    </div>
+    {% endblock %}
+</body>
+
+{% block base_script %}
+>>>>>>> Stashed changes
 <script>
     
     const imgPosition = document.querySelectorAll(" .aspect-ratio-169 img")

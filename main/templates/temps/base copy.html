@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/320a7f7d7f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Photography{% endblock %}</title>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'assets/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/contact.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <!-- <div class="background">
+    </div> -->
+   <header>            
+        <a href="/", class="logo" >
+                <img src="/media/CONE land 2.png" style="width:142px;height:70px;align-items: top;">
+        </a>
+        <div class="menu">
+            <li> <a href="/introduction">GIỚI THIỆU</a></li>
+            <li> <a href="">THỂ LOẠI ẢNH</a>
+                <ul class="sub-menu">
+                    <li><a href="">Nhiếp ảnh chân dung</a></li>
+                    <li><a href="/landscape">Nhiếp ảnh phong cảnh</a></li>
+                    <li><a href="">Nhiếp ảnh kiến trúc</a></li>
+                    <li><a href="">Nhiếp ảnh thể thao</a></li>
+                </ul>
+            </li>
+            <li> <a href="/camera">MÁY ẢNH</a>
+                <ul class="sub-menu">
+                    <li><a href="/dslr">Máy ảnh DSLR</a></li>
+                    <li><a href="/mirrorless">Máy ảnh Mirrorless</a></li>
+                    <li><a href="">Máy ảnh Bridge</a></li>
+                    <li><a href="">Máy ảnh Compact</a></li>
+                </ul>
+            </li>
+            
+            <li> <a href="">SẢN PHẨM KHÁC</a>
+                <ul class="sub-menu">
+                    <li><a href="">Lens</a></li>
+                    <li><a href="">Tripod</a></li>
+                    <li><a href="">Sạc dự phòng</a></li>
+                    <li><a href="">Cáp sạc, Pin</a></li>
+                    <li><a href="">Dụng cụ vệ sinh</a></li>
+                    <li><a href="">Hộp hút ẩm</a></li>
+                    <li><a href="">Tủ hút ẩm</a></li>
+                    <li><a href="">Các dụng cụ khác</a></li>
+
+                </ul>
+            </li>
+            <li> <a href="/container">GIỎ HÀNG</a></li>
+            <li> <a href="/contact">LIÊN HỆ</a></li>
+            <li> <a href="/login">ĐĂNG NHẬP</a></li>
+
+        </div>
+        <div class="other">
+            <li> <input placeholder="Tìm kiếm" type="text"> <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>  
+            </li>
+            <li><a href=""><i class="fa-solid fa-user"></i></li></a>
+        </div>
+    </header>
+
+<!---footer-->    
+    {% block content %}
+    <section id="slider">
+        <div class="aspect-ratio-169">
+            <img src="/media/canon.png">
+            <div class="text"><a href="">Learn more</a></div>
+            
+            <img src="/media/sony.png">
+            <div class="text"><a href="">Learn more</a></div>
+        </div>
+        <div class="dot-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+    {% endblock %}
+    
+<!-- khoi footer -->
+{% block footer %}
+    <section class="app-container">
+            <p>Tải ứng dụng nhiếp ảnh</p>
+            <div class="app-google">
+                <a href="" class="link-ggplay">
+                    <img src="/media/googleplay.png" alt="">
+                </a>
+               <a href="" class="link-appstore">
+                   <img src="/media/appstore.png" alt="">
+               </a>
+            </div>
+    </section>
+
+<div class="footer-top">
+    <p>Trường Đại học Công Nghệ Thông Tin - ĐHQGTPHCM</p>
+    <p>Địa chỉ: Khu phố 6, phường Linh Trung, TP Thủ Đức, TP Hồ Chí Minh</p>
+</div>
+{% endblock %}
+
+</body>
+{% block base_script %}
+<script>
+    
+    const imgPosition = document.querySelectorAll(" .aspect-ratio-169 img")
+    
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNumber = imgPosition.length
+    let index = 0
+    imgPosition.forEach(function(image, index){
+       image.style.left = index*100 + "%"
+       dotItem[index].addEventListener("click",function(){
+        slider(index)
+       })
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if(index>=imgNumber) {index=0}
+        slider (index)
+        
+
+    }
+
+    function slider(index) {
+        
+        imgContainer.style.left = "-" +index*100+ "%"
+        const dotActive = document.querySelector('.active')
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide,5000)
+
+
+</script>
+{% endblock %}
+</html>
+
+<!--
+-->

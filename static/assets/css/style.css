@@ -1,4 +1,9 @@
+/* using google font */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("/static/assets/css/neue-stylesheet.css");
 
+<<<<<<< Updated upstream
 
 header {
     display: flex;
@@ -11,168 +16,235 @@ header {
     z-index: 1;
     width: 100%;
     background: white;
+=======
+/* body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* min-height: 100vh; */
+>>>>>>> Stashed changes
 }
 
-
-li {
-    list-style:none ;
+/* Navigator bar */
+nav {
+  background-color: #558290;
+  /* border: 6px solid rgba(0, 0, 0, 0.25); */
+  /* font-family: "Neue Frutiger World",Tahoma,sans-serif; */
+  font-family: "Neue Frutiger";
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 13px !important;
+  font-weight: bold;
+  height: 80px;
+  /* line-height: normal;
+  position: relative; */
+  display: flex;
+  width: 100%;
+  z-index: 3000000;
+}
+nav a {
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0px 4px;
+  padding: 7.5px 16px;
+  transition: linear 0.5s;
+  text-align: center;
+}
+/* left content */
+nav .left-content {
+  padding-left: 36px;
+  display: flex;
+  align-items: center;
+}
+nav .brand-switchers {
+  position: relative; 
+}
+/* mid content */
+/* nav .power-logo {
+  padding-left: 22px;
+} */
+nav .mid-content {
+  display: flex;
+  align-items: center;
 }
 
-a {
-    text-decoration: none;
-    color:black;
+/* logo */
+nav a.logo {
+  display: block;
+  padding: 0px;
+  margin:0px;
+}
+/* drop down button */
+.drop-down-button {
+  /* margin-left: 115px; */
+  fill:white;
 }
 
-.logo  {
-    flex:1;
-    top:0px;
-    left:50px;
-    position: relative;
+nav .logo-outer {
+  padding-left: 18px;
 }
 
 .menu {
+<<<<<<< Updated upstream
     flex:3;
     display: flex;
     
     
     text-align: center;
     position: relative;
+=======
+  font-family: "Open Sans", sans-serif;
+  flex:3;
+  display: flex;
+  text-align: center;
+  position: relative;
+>>>>>>> Stashed changes
 }
 
 .menu > li:hover .sub-menu {
-    display: block;
-    visibility: visible;
-    top: 50px;
+  display: block;
+  visibility: visible;
+  top: 50px;
 }
 
 .sub-menu {
-    position: absolute;
-    width: 200px;
-    border: none;
-    padding-top: 9px;
-    background-color: none;
-    visibility: hidden;
-    top:100px;
-    transition: 0.3s;
-    z-index: 1;
+  position: absolute;
+  width: 200px;
+  border: none;
+  padding-top: 9px;
+  background-color: none;
+  visibility: hidden;
+  top:100px;
+  transition: 0.3s;
+  z-index: 1;
 }
 .sub-menu >li>a {
+<<<<<<< Updated upstream
     width: 150px;
     border: none solid rgb(158, 146, 146);
     background-color: rgb(235, 237, 239);
+=======
+  width: 200px;
+  border: none solid rgb(158, 146, 146);
+  background-color: rgb(235, 237, 239);
+>>>>>>> Stashed changes
 }
 
 .menu > li {
-    padding: 12px;
-    
+  padding: 12px;
 }
 .menu >li a {
-    font-size: 15px;
-    font-weight:bold ;
-
-    display: block;
-    line-height: 35px;
-
+  font-size: 15px;
+  font-weight:bold ;
+  display: block;
+  line-height: 35px;
 }
 
 .other {
-    flex: 1;
-    display: flex;
-    padding-right: 0px;
+  flex: 1;
+  display: flex;
+  padding-right: 0px;
 }
 .other > li {
-    padding: 0 12px;
+  padding: 0 12px;
 }
 
 .other > li:first-child {
-    position: relative;
+  position: relative;
 }
 .other > li:first-child input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid black;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
 }
 .other > li:first-child i {
-    position:absolute;
-    right: 10px;
-    top:0px;
+  position:absolute;
+  right: 10px;
+  top:0px;
 }
 #slider {
-    
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
 .aspect-ratio-169 {
-    display: block;
-    position: relative;
-    padding-top: 56.25%;
-    transition: 0.5s;
-    
-  }
+  display: block;
+  position: relative;
+  padding-top: 56.25%;
+  transition: 0.5s;
+}
   
-  .aspect-ratio-169 img {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 25px;
-    left: 0;
-    
-  }
+.aspect-ratio-169 img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+}
 
-  .canon {
-    
-    color: #000;
-    position:absolute;
-    top:512px;
-  }
+.canon {
+  color: #000;
+  position:absolute;
+  top:512px;
+}
 
-  .dot-container {
-    position: absolute;
-    height: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+.dot-container {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  .dot {
-    height: 15px;
-    width: 15px;
-    background-color: #898181;
-    border-radius: 50%;
-    margin-right: 12px;
-   margin-top: 10px;
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #898181;
+  border-radius: 50%;
+  margin-right: 12px;
+  margin-top: 10px;
+}
 
-  }
+.dot.active {
+  background-color: #222121;
+}
 
-  .dot.active {
-    background-color: #222121;
-  }
+/*--------------------------------*/
 
-  /*--------------------------------*/
+.app-container {
+  text-align:center;
+  align-items:center;
+  margin-top:50px;
+  padding-bottom: 10px;
+}
 
-  .app-container {
-    text-align:center;
-    align-items:center;
-    margin-top:50px;
-    padding-bottom: 10px;
-  }
+.app-google {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
-  .app-google {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+.app-container  p {
+  color:#000;
+  font-weight: bold;
+  font-size: 17px;
+  padding-top: 20px;
+}
 
-  .app-container  p {
-    color:#000;
-    font-weight: bold;
-    font-size: 17px;
-    padding-top: 20px;
-  }
+/*--------------footer-------------*/
 
-  /*--------------footer-------------*/
+.footer-top {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 20px;
+}
 
+<<<<<<< Updated upstream
   .footer-top {
     text-align: center;
     
@@ -368,8 +440,147 @@ a {
   #cart:hover {
     border-color: #fff;
   }
+=======
+.footer-top p {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 12px;
+  font-weight: bold;
+}
 
-  /* wrapper */
+.row {
+  font-family: "Open Sans", sans-serif;
+  padding-top: 0px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*cartegory*/
+li {
+  list-style: none;
+}
+
+/* modal */
+.modal {
+  font-family: "Open Sans", sans-serif;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+>>>>>>> Stashed changes
+
+.modal-content {
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  border-top: 1px solid #aaaaaa;
+  padding: 1rem;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-top: 1px solid #aaaaaa;
+  padding: 1rem;
+}
+
+.modal-footer>:not(:first-child) {
+  margin-left: .25rem;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  outline: none;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn-secondary {
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #56baed;
+  border-color: #56baed;
+}
+
+.modal-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 1rem;
+}
+
+h5.modal-title {
+  font-size: 1.5rem;
+}
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#cart {
+  font-size: 15px;
+  color: #fff;
+  background: #56baed;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  margin-left: 1rem;
+  padding: 12px;
+  cursor: pointer;
+}
+
+#cart:hover {
+  border-color: #fff;
+}
+
+/* wrapper */
 .wrapper {
   padding: 2rem;
   padding-top:75px;
@@ -470,6 +681,7 @@ a {
   margin-left: .5rem;
 }
 
+<<<<<<< Updated upstream
 
 .header {
   text-align: center;
@@ -482,6 +694,9 @@ a {
 
 }
 .body > li {
+=======
+/* .body > li {
+>>>>>>> Stashed changes
     height: 25px;
     width: 200px;
     padding-top:0px;
@@ -491,7 +706,7 @@ a {
     margin-left:auto;
     margin-right:auto;
     padding-left:0px;
-}
+} */
 
 .foot {
   padding-top:12px;
@@ -504,4 +719,8 @@ a {
 }
 .boby > p {
     margin-right: 10px;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
